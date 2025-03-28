@@ -1,18 +1,23 @@
 class Foco
 { 
 private:
-    bool estadoActual;
+    bool encendido;
 
 public:
-Foco(){}
-~Foco(){}
+  foco(){
+      encendido = false;
+  }
 void Encender(){
-  estadoActual = true;
+    encendido = true;
+} 
+void Apagar(){
+    encendido = false;
 }
-void Apagar (){
-  estadoActual = false;
+char LeerEstado(){
+    if(encendido)
+        return'*';
+    else
+        return'-';
 }
-bool LeerEstado(){
-  return estadoActual;
-}
+
 };
