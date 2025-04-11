@@ -15,3 +15,9 @@ memoria: bin/memoria
 
 bin/memoria: src/memoria.cpp
 	$(CXX) $< -o $@ -std=c++17
+
+archivo: bin/archivo
+	./$<
+
+bin/archivo: src/archivo.cpp
+	$(CXX) $< -o $@ -std=c++17
