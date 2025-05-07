@@ -21,3 +21,10 @@ archivo: bin/archivo
 
 bin/archivo: src/archivo.cpp
 	$(CXX) $< -o $@ -std=c++17
+
+pokedex: bin/pokedex
+	./$<
+
+bin/pokedex: src/pokedex.cpp
+	$(CXX) $< -o $@ -std=c++17
+
